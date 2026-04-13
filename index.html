@@ -127,7 +127,7 @@ a{color:inherit}
 <div class="app" id="app"></div>
 <script>
 var ADMIN_PIN="4451";
-var SK="eq-flex-ramp-v3";
+var SK="eq-flex-ramp-v4";
 var RT={doc:"📄",video:"🎬",link:"🔗",tool:"🛠️",person:"👤",course:"📚",ticket:"🎫",wiki:"📘",dashboard:"📊"};
 var PC={high:"#ef4444",medium:"#f59e0b",low:"#94a3b8"};
 var TICKET_REASONS=["New Hire Enrollment: Misfiled Hire Status","New Hire Enrollment: Change in Enrollment","Employee Termination: Missed/Incorrect Termination","Group Level Issue: Change of BPOA/Admin","Group Level Issue: Waiting Period Discrepancy","Group Level Issue: Termination Policy Discrepancy"];
@@ -154,6 +154,8 @@ var DT=[
 {id:"t0-2",phaseId:"p0",text:"SFDC Profile Access — Member Fulfillment profile, role: MemberFulfillment team",resources:[{type:"tool",label:"Salesforce",url:""}],owner:"PE/Captain",priority:"high",startDate:"",dueDate:"",trainingLinks:[],visible:true,adminOnly:false},
 {id:"t0-3",phaseId:"p0",text:"Ensure IC has access: Adobe, Slack channels, NICE, CXWFM, SFDC profile settings",resources:[{type:"tool",label:"Adobe",url:""},{type:"tool",label:"NICE",url:""},{type:"tool",label:"CXWFM",url:""}],owner:"PE/Captain",priority:"high",startDate:"",dueDate:"",trainingLinks:[],visible:true,adminOnly:false},
 {id:"t0-4",phaseId:"p0",text:"Transfer IC in WFM — submit WFM JIRA for 6-month rotation",resources:[{type:"tool",label:"WFM JIRA",url:""}],owner:"PE/Captain",priority:"high",startDate:"",dueDate:"",trainingLinks:[],visible:true,adminOnly:false},
+{id:"t0-5",phaseId:"p0",text:"Submit IT request to add to Member Ops EQ Okta group",resources:[{type:"doc",label:"Permissions Spreadsheet",url:"https://docs.google.com/spreadsheets/d/1j1Dqux0HchyD0Otn2K_DKewvDNYD9aqaO83YridXD6M/edit?gid=1464489322#gid=1464489322"}],owner:"PE/Captain",priority:"high",startDate:"",dueDate:"",trainingLinks:[{name:"OKTA group to link",url:"https://app.gusto.com/panda/admin_groups/491"}],visible:true,adminOnly:false},
+{id:"t0-6",phaseId:"p0",text:"PE to remove Flexors from Member Ops EQ Okta group after rotation",resources:[],owner:"PE/Captain",priority:"high",startDate:"",dueDate:"",trainingLinks:[{name:"OKTA link",url:"https://app.gusto.com/panda/admin_groups/491"}],visible:true,adminOnly:false},
 // ---- Day 1 Orientation ----
 {id:"t1-1",phaseId:"p1",text:"Review Slack channel for ticket help: #check-my-ticket-eq",resources:[{type:"link",label:"#check-my-ticket-eq",url:"https://gusto.enterprise.slack.com/archives/C035VFESKJL"}],owner:"Trainer",priority:"high",startDate:"",dueDate:"",trainingLinks:[],visible:true,adminOnly:false},
 {id:"t1-2",phaseId:"p1",text:"Review QC Error Guide",resources:[{type:"doc",label:"CX QC Error Guide (Eff 7/1/24)",url:"https://docs.google.com/spreadsheets/u/0/d/1Ie9QzN41xRVVcZzf95ygJy8_tAOKSVdurL6AIA5FrxE/edit"}],owner:"Trainer",priority:"high",startDate:"",dueDate:"",trainingLinks:[{name:"QC Errors Assignment and Training Guide",url:"https://gustohq.atlassian.net/wiki/spaces/FT/pages/74297220/QC+Errors+Assignment+and+Training+Guide"}],visible:true,adminOnly:false},
@@ -164,7 +166,7 @@ var DT=[
 {id:"mnt0xfl2ga4n",phaseId:"p1",text:"Expectations and EQ Metrics",resources:[{type:"doc",label:"EQ Expectations Wiki",url:"https://gustohq.atlassian.net/wiki/spaces/FT/pages/376799508/EQ+Team+Channel+Overview+and+Expectations"}],owner:"Trainer",priority:"high",startDate:"",dueDate:"",trainingLinks:[],visible:true,adminOnly:false},
 {id:"mnt0yb6t9icx",phaseId:"p1",text:"Notebook LLM",resources:[],owner:"Trainer",priority:"high",startDate:"",dueDate:"",trainingLinks:[{name:"Notebook LLM Link",url:"https://notebooklm.google.com/notebook/8af9feac-5b36-4b37-97f1-32bdecde88c7"}],visible:true,adminOnly:false},
 {id:"mnt0z4v60o1v",phaseId:"p1",text:"Creating a BenComms Case",resources:[],owner:"Trainer",priority:"high",startDate:"",dueDate:"",trainingLinks:[{name:"EQ Comms SOP",url:"https://gustohq.atlassian.net/wiki/spaces/FT/pages/779681980/EQ+Communication+SOP+and+Resources"}],visible:true,adminOnly:false},
-{id:"mnt10rvjip2n",phaseId:"p1",text:"\n[TEMPLATE] EQ Ticket Checklist (Make a Copy)",resources:[],owner:"Trainer",priority:"high",startDate:"",dueDate:"",trainingLinks:[{name:"🔗 Escalation Triage SOP",url:"https://docs.google.com/document/u/0/d/1IRaRsQjnKeI8K9rrbi0oleNRP_G3KuNJ8Rb0hJW5KX4/edit"}],visible:true,adminOnly:false},
+{id:"mnt10rvjip2n",phaseId:"p1",text:"[TEMPLATE] EQ Ticket Checklist (Make a Copy)",resources:[],owner:"Trainer",priority:"high",startDate:"",dueDate:"",trainingLinks:[{name:"🔗 Escalation Triage SOP",url:"https://docs.google.com/document/u/0/d/1IRaRsQjnKeI8K9rrbi0oleNRP_G3KuNJ8Rb0hJW5KX4/edit"}],visible:true,adminOnly:false},
 {id:"mnt130cwr1xs",phaseId:"p1",text:"EQ Training Wiki & GDrive",resources:[{type:"link",label:"EQ Wiki Training Guides",url:"https://gustohq.atlassian.net/wiki/spaces/FT/pages/74267561/EQ+Training+Materials"}],owner:"Trainer",priority:"medium",startDate:"",dueDate:"",trainingLinks:[{name:"Gdrives of training can be found in Wiki under tab \"EQ Training Videos/Gdrives\"",url:"https://gustohq.atlassian.net/wiki/spaces/FT/pages/74267561/EQ+Training+Materials"}],visible:true,adminOnly:false},
 {id:"mnt1irn0en80",phaseId:"p1",text:"EQ Carrier Wiki",resources:[{type:"link",label:"EQ Carrier Wiki",url:"https://gustohq.atlassian.net/wiki/spaces/FT/pages/418578688/E+Q+Carriers+Table+of+Contents"}],owner:"Trainer",priority:"medium",startDate:"",dueDate:"",trainingLinks:[{name:"Waiting Period/Termination Policy Guidance and Definitions",url:"https://gustohq.atlassian.net/wiki/spaces/FT/pages/74288942/Waiting+Period+Termination+Policy+Guidance+and+Definitions"}],visible:true,adminOnly:false},
 {id:"mnt1l42paehj",phaseId:"p1",text:"What E/Q Does and Does NOT work on",resources:[{type:"link",label:"EQ Wiki",url:"https://gustohq.atlassian.net/wiki/spaces/FT/pages/74253393/What+E+Q+Does+and+Does+NOT+work+on"}],owner:"Trainer",priority:"medium",startDate:"",dueDate:"",trainingLinks:[],visible:true,adminOnly:false},
@@ -209,7 +211,6 @@ function load(){
   try{var sd=localStorage.getItem(SK);if(sd){var d=JSON.parse(sd);if(d.phases)S.phases=d.phases;if(d.tasks)S.tasks=d.tasks;if(d.startDate)S.startDate=d.startDate;}}catch(e){}
   if(!S.phases)S.phases=JSON.parse(JSON.stringify(DP));
   if(!S.tasks)S.tasks=JSON.parse(JSON.stringify(DT));
-  // Merge preloaded URLs from defaults into saved tasks
   var defMap={};DT.forEach(function(dt){defMap[dt.id]=dt;});
   S.tasks.forEach(function(st){
     var def=defMap[st.id];if(!def)return;
@@ -244,7 +245,6 @@ function importProgressJson(s){
   catch(e){return"Error: "+e.message;}
 }
 
-// DOM helper
 function h(tag,attrs){
   var kids=Array.prototype.slice.call(arguments,2);
   var el=document.createElement(tag);
@@ -260,7 +260,6 @@ function vl(task){if(task.adminOnly)return{cls:"v-admin",txt:"🔒 Admin Only"};
 
 function showOv(content){var ov=h("div",{className:"overlay",onClick:function(e){if(e.target===ov)ov.remove();}},content);document.body.appendChild(ov);return ov;}
 
-// ---- PIN ----
 function showPin(){
   var pin="";
   var inp=h("input",{type:"password",placeholder:"PIN",style:{width:"100%",padding:"12px 16px",borderRadius:"10px",border:"2px solid var(--border)",fontSize:"18px",textAlign:"center",letterSpacing:"8px",outline:"none",boxSizing:"border-box"}});
@@ -278,7 +277,6 @@ function showPin(){
   var ov=showOv(modal);setTimeout(function(){inp.focus();},100);
 }
 
-// ---- LINK EDITOR ----
 function showLinkEdit(curUrl,label,onSave){
   var inp=h("input",{type:"text",className:"minp",value:curUrl||"",placeholder:"Paste URL here..."});
   inp.style.border="2px solid var(--teal-border)";inp.style.background="var(--teal-light)";
@@ -293,7 +291,6 @@ function showLinkEdit(curUrl,label,onSave){
   var ov=showOv(modal);setTimeout(function(){inp.focus();if(curUrl)inp.select();},100);
 }
 
-// ---- TRAINING LINK EDITOR ----
 function showTLEdit(task,idx){
   var isNew=idx===-1,ex=isNew?{name:"",url:""}:task.trainingLinks[idx];
   var ni=h("input",{type:"text",className:"minp",value:ex.name||"",placeholder:"Link name..."});
@@ -311,7 +308,6 @@ function showTLEdit(task,idx){
   var ov=showOv(modal);setTimeout(function(){ni.focus();},100);
 }
 
-// ---- ADD RESOURCE ----
 function showAddRes(task){
   var rType="doc",rLabel="",rUrl="";
   var typeSel=h("select",{className:"minp",style:{background:"white"}});Object.keys(RT).forEach(function(k){typeSel.appendChild(h("option",{value:k},RT[k]+" "+k));});typeSel.addEventListener("change",function(e){rType=e.target.value;});
@@ -324,7 +320,6 @@ function showAddRes(task){
   var ov=showOv(modal);setTimeout(function(){li.focus();},100);
 }
 
-// ---- ADD TASK MODAL ----
 function showAddTask(phaseId){
   var f={phaseId:phaseId,text:"",owner:"Trainer",priority:"medium",startDate:"",dueDate:"",resources:[],trainingLinks:[],visible:true,adminOnly:false};
   var ta=h("textarea",{className:"minp",placeholder:"Task description...",rows:2,style:{resize:"vertical"}});ta.addEventListener("input",function(e){f.text=e.target.value;});
@@ -349,7 +344,6 @@ function showAddTask(phaseId){
   var ov=showOv(modal);
 }
 
-// ---- ADD PHASE MODAL ----
 function showAddPhase(){
   var f={name:"New Phase",weeks:"",icon:"📌",color:"#0d9488",goal:"",adminOnly:false};
   var COLS=["#0d9488","#0369a1","#7c3aed","#9333ea","#0891b2","#16a34a","#d97706","#dc2626","#e879f9","#4f46e5","#38bdf8","#14b8a6","#f59e0b","#a855f7","#ec4899","#10b981"];
@@ -367,7 +361,6 @@ function showAddPhase(){
   var ov=showOv(modal);
 }
 
-// ---- FAQ EDIT ----
 function showFaqEdit(index){
   var isNew=index===-1,f=isNew?{q:"",a:""}:{q:FAQS[index].q,a:FAQS[index].a};
   var qi=h("textarea",{className:"minp",rows:2,style:{resize:"vertical"}});qi.value=f.q;qi.addEventListener("input",function(e){f.q=e.target.value;});
@@ -382,7 +375,6 @@ function showFaqEdit(index){
   var ov=showOv(modal);setTimeout(function(){qi.focus();},100);
 }
 
-// ---- CONFIRM DELETE ----
 function showConfirm(type,id){
   var modal=h("div",{className:"modal",onClick:function(e){e.stopPropagation();},style:{maxWidth:"340px",textAlign:"center"}},
     h("div",{style:{fontSize:"32px",marginBottom:"8px"}},"⚠️"),h("h3",null,"Delete "+type+"?"),
@@ -399,12 +391,10 @@ function showConfirm(type,id){
   var ov=showOv(modal);
 }
 
-// ---- BULK DATES (full per-task selection, same as GL/ML) ----
 function showBulkDates(){
   var newStart="",newDue="",applyField="both";
   var selectedTasks={};S.tasks.forEach(function(t){selectedTasks[t.id]=true;});
   var taskListEl=h("div",{style:{maxHeight:"280px",overflowY:"auto",border:"1px solid var(--border)",borderRadius:"8px",background:"#fafbfc"}});
-
   function renderList(){
     taskListEl.innerHTML="";
     S.phases.forEach(function(ph){
@@ -434,7 +424,6 @@ function showBulkDates(){
     });
   }
   renderList();
-
   var startInp=h("input",{type:"date",className:"minp"});startInp.addEventListener("input",function(e){newStart=e.target.value;});
   var dueInp=h("input",{type:"date",className:"minp"});dueInp.addEventListener("input",function(e){newDue=e.target.value;});
   var fieldSel=h("select",{className:"minp",style:{background:"white"}},
@@ -444,7 +433,6 @@ function showBulkDates(){
   );
   fieldSel.addEventListener("change",function(e){applyField=e.target.value;});
   var resultMsg=h("p",{style:{fontSize:"11px",fontWeight:"600",color:"#10b981",margin:"8px 0 0",display:"none"}});
-
   function doApply(){
     var count=0;
     S.tasks.forEach(function(t){
@@ -456,10 +444,8 @@ function showBulkDates(){
     save();resultMsg.textContent="✅ Updated "+count+" task"+(count!==1?"s":"")+".";resultMsg.style.display="block";
     renderList();setTimeout(function(){ov.remove();render();},1200);
   }
-
   var selAllBtn=h("button",{style:{padding:"3px 10px",borderRadius:"6px",border:"1px solid var(--border)",background:"white",fontSize:"10px",fontWeight:"600",color:"var(--slate)",cursor:"pointer"},onClick:function(){S.tasks.forEach(function(t){selectedTasks[t.id]=true;});renderList();}},"Select All");
   var selNoneBtn=h("button",{style:{padding:"3px 10px",borderRadius:"6px",border:"1px solid var(--border)",background:"white",fontSize:"10px",fontWeight:"600",color:"var(--slate)",cursor:"pointer"},onClick:function(){S.tasks.forEach(function(t){selectedTasks[t.id]=false;});renderList();}},"Deselect All");
-
   var modal=h("div",{className:"modal",onClick:function(e){e.stopPropagation();},style:{maxWidth:"520px"}},
     h("h3",null,"📅 Bulk Change Dates"),
     h("p",{style:{fontSize:"12px",color:"var(--slate)",margin:"0 0 14px"}},"Update dates across multiple tasks at once — useful if your rotation start date shifted."),
@@ -478,7 +464,6 @@ function showBulkDates(){
   var ov=showOv(modal);
 }
 
-// ---- EXPORT ALL LINKS ----
 function exportAllLinks(app){
   var allData={resources:{},trainingLinks:{}};
   S.tasks.forEach(function(task){
@@ -492,7 +477,6 @@ function exportAllLinks(app){
   app.appendChild(ta);ta.focus();ta.select();
 }
 
-// ---- EXPORT & PUBLISH (fetch+replace+download) ----
 function exportPublish(){
   var msgEl=document.getElementById("export-pub-msg");
   if(msgEl){msgEl.textContent="⏳ Preparing...";msgEl.style.color="#6366f1";}
@@ -515,7 +499,6 @@ function exportPublish(){
     });
 }
 
-// ---- PROGRESS SUMMARY ----
 function showProgressSummary(){
   var name=S.userName,today=new Date().toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"});
   var allT=S.tasks.filter(function(t){return t.visible!==false&&!t.adminOnly;});
@@ -550,7 +533,6 @@ function showProgressSummary(){
   var ov=showOv(modal);
 }
 
-// ======= RENDER =======
 function render(){
   var app=document.getElementById("app");app.innerHTML="";
 
@@ -575,7 +557,6 @@ function render(){
   var pct=total?Math.round(doneC/total*100):0;
   var owners=["All"];visT.forEach(function(t){if(!owners.includes(t.owner))owners.push(t.owner);});
 
-  // HEADER
   var startEl;
   if(isAdm){var si=h("input",{type:"date",value:S.startDate,style:{padding:"2px 6px",borderRadius:"6px",border:"1px solid rgba(255,255,255,.4)",fontSize:"12px",color:"white",fontWeight:"600",background:"rgba(255,255,255,.15)",outline:"none"}});si.addEventListener("change",function(e){S.startDate=e.target.value;save();render();});startEl=si;}
   else startEl=h("span",null,S.startDate?fmtD(S.startDate):"—");
@@ -596,7 +577,6 @@ function render(){
     )
   ));
 
-  // ADMIN BAR
   if(isAdm){
     var pubMsg=h("span",{id:"export-pub-msg",style:{fontSize:"11px",fontWeight:"600",marginLeft:"6px"}});
     app.appendChild(h("div",{className:"admin-bar"},
@@ -613,12 +593,10 @@ function render(){
     ));
   }
 
-  // EXPORT ALL LINKS (always visible below header)
   app.appendChild(h("div",{style:{display:"flex",justifyContent:"flex-end",marginBottom:"8px"}},
     h("button",{style:{padding:"5px 12px",borderRadius:"6px",border:"2px solid #f59e0b",background:"#fffbeb",color:"#92400e",fontSize:"11px",fontWeight:"700",cursor:"pointer"},onClick:function(){exportAllLinks(app);}},"📤 Export All Links")
   ));
 
-  // SEARCH
   var sdrop=h("div",{className:"sdrop"});
   var sinp=h("input",{placeholder:"🔍 Search tasks, FAQ...",value:S.search,style:{width:"100%",padding:"10px 14px",borderRadius:"10px",border:"1px solid var(--border)",fontSize:"13px",outline:"none",background:"white",boxSizing:"border-box"}});
   sinp.addEventListener("input",function(e){S.search=e.target.value;sdrop.innerHTML="";if(S.search.length<2){sdrop.classList.remove("show");return;}var q=S.search.toLowerCase();var fq=FAQS.filter(function(f){return f.q.toLowerCase().includes(q);});var tq=visT.filter(function(x){return x.text.toLowerCase().includes(q)||x.owner.toLowerCase().includes(q);}).slice(0,5);if(!fq.length&&!tq.length){sdrop.classList.remove("show");return;}fq.forEach(function(f){sdrop.appendChild(h("div",{style:{padding:"8px 14px",borderBottom:"1px solid #f1f5f9"}},h("div",{style:{fontSize:"12px",fontWeight:"600",color:"var(--teal)"}},"❓ "+f.q),h("div",{style:{fontSize:"11px",color:"var(--slate)"}},f.a)));});tq.forEach(function(x){var ph=S.phases.find(function(p){return p.id===x.phaseId;});sdrop.appendChild(h("div",{style:{padding:"8px 14px",borderBottom:"1px solid #f1f5f9",display:"flex",gap:"8px"}},h("div",{style:{width:"4px",height:"22px",borderRadius:"2px",background:ph?ph.color:"#ccc",flexShrink:"0"}}),h("div",null,h("div",{style:{fontSize:"12px",fontWeight:"500"}},x.text),h("div",{style:{fontSize:"10px",color:"#94a3b8"}},(ph?ph.name:"")+" · "+x.owner))));});sdrop.classList.add("show");});
@@ -636,7 +614,6 @@ function render(){
 
   app.appendChild(h("div",{className:"filter-row"},h("span",{style:{fontSize:"10px",fontWeight:"600",color:"#94a3b8"}},"FILTER:"),owners.map(function(o){return h("button",{className:"fbtn"+(S.filter===o?" on":""),onClick:function(){S.filter=o;render();}},o);})));
 
-  // ====== QUICK INFO ======
   if(S.view==="info"){
     app.appendChild(h("div",{className:"quick-grid"},
       h("div",{className:"qi"},h("div",{style:{fontSize:"20px",marginBottom:"4px"}},"💬"),h("div",{style:{fontSize:"10px",fontWeight:"700",color:"var(--slate)",textTransform:"uppercase",letterSpacing:".5px"}},"Slack Help"),h("div",{style:{fontSize:"13px",fontWeight:"700",marginTop:"2px"}},"#check-my-ticket-eq")),
@@ -650,7 +627,6 @@ function render(){
     app.appendChild(h("div",{className:"info-card"},h("h3",null,"🛠️ Key Trainings Covered"),h("div",{style:{display:"flex",flexDirection:"column",gap:"6px",marginTop:"4px"}},["Updating the BPOA","Edit an Employee's Benefits Status (Hippo)","EQ New Hire Enrollments & Waiting Periods","NHE/OE OA Action Required","EQ Terminations","Waiting Period / Group Level Training","Payroll Journal with Gusto"].map(function(tr){return h("div",{style:{display:"flex",alignItems:"center",gap:"6px",fontSize:"12px",color:"var(--slate)",padding:"4px 0",borderBottom:"1px solid #f1f5f9"}},h("span",{style:{color:"var(--teal)",fontSize:"14px"}},"✓"),tr);}))));
   }
 
-  // ====== FAQ ======
   if(S.view==="faq"){
     FAQS.forEach(function(f,i){
       var open=S.faqOpen===i;
@@ -670,7 +646,6 @@ function render(){
     if(isAdm)app.appendChild(h("button",{style:{marginTop:"6px",padding:"8px",borderRadius:"8px",border:"1px dashed var(--teal-border)",background:"var(--teal-light)",color:"var(--teal)",fontSize:"12px",fontWeight:"700",width:"100%",cursor:"pointer"},onClick:function(){showFaqEdit(-1);}},"✚ Add FAQ Entry"));
   }
 
-  // ====== GUIDE ======
   if(S.view==="guide"){
     var gs=function(icon,title,steps){return h("div",{className:"info-card"},h("h3",null,icon+" "+title),steps.map(function(s){return h("div",{style:{display:"flex",gap:"10px",marginBottom:"10px",alignItems:"flex-start"}},h("div",{style:{width:"24px",height:"24px",borderRadius:"50%",background:"var(--teal)",color:"white",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",fontWeight:"800",flexShrink:"0"}},s.n),h("div",null,h("div",{style:{fontSize:"13px",fontWeight:"600",color:"#334155"}},s.t),s.d?h("div",{style:{fontSize:"12px",color:"var(--slate)",marginTop:"2px"}},s.d):null));}));};
     app.appendChild(gs("🚀","Getting Started",[{n:"1",t:"Enter your name on first open.",d:"Your progress is saved locally under your name. Use the same browser/device each time."},{n:"2",t:"Work through phases and check tasks off.",d:"Checkboxes turn teal when done. Phase and overall progress update automatically."},{n:"3",t:"Filter by owner to find your tasks.",d:"Click PE/Captain, Trainer, or Flexor in the filter row."},{n:"4",t:"Use the 📅 Bulk Dates button to reschedule.",d:"Available in the nav bar and admin toolbar. Select tasks individually or by phase."},{n:"5",t:"Click 📋 Share to generate a weekly summary.",d:"Paste into Slack or email to your captain. Also includes a progress data export for the dashboard."}]));
@@ -680,7 +655,6 @@ function render(){
     if(isAdm){app.appendChild(gs("✏️","Admin Features",[{n:"A",t:"Click any field to edit inline.",d:"Task text, owner, priority, dates, phase name, icon, weeks, goal, and color all edit directly on the page."},{n:"B",t:"Phase color bar = color picker.",d:"Click the colored bar on the left edge of a phase to pick a new color."},{n:"C",t:"Visibility badge cycles on click.",d:"Tap ✅/👁/🔒 on any task: Visible → Hidden → Admin Only."},{n:"D",t:"FAQ tab is fully editable.",d:"Add, edit, delete, and reorder FAQ entries with the ✏️ controls when in admin mode."},{n:"E",t:"Dashboard shows all Flexors' progress.",d:"Import progress data from flexors via the 📥 Import section. Add names manually if needed."},{n:"F",t:"Export & Publish bakes all changes into index.html.",d:"Upload to your hosting (e.g. GitHub Pages) and everyone on the shared link sees updates within minutes."}]));}
   }
 
-  // ====== DASHBOARD ======
   if(S.view==="dashboard"&&isAdm){
     var reg=getReg();
     app.appendChild(h("div",{style:{marginBottom:"14px"}},h("h2",{style:{fontSize:"18px",fontWeight:"800",margin:"0 0 4px"}},"📊 Team Dashboard"),h("p",{style:{fontSize:"13px",color:"var(--slate)",margin:"0 0 12px"}},reg.length+" flexor"+(reg.length!==1?"s":"")+" registered.")));
@@ -701,7 +675,6 @@ function render(){
         ));
       });
     }
-    // Import progress
     app.appendChild(h("div",{style:{marginTop:"12px",background:"#f0fdf4",border:"1px solid #bbf7d0",borderRadius:"12px",padding:"14px"}},
       h("h3",{style:{fontSize:"13px",fontWeight:"700",color:"#166534",margin:"0 0 4px"}},"📥 Import Flexor Progress"),
       h("p",{style:{fontSize:"11px",color:"#166534",margin:"0 0 8px"}},"Ask flexors to open 📋 Share → tap 'Copy Progress Data', then paste below."),
@@ -712,7 +685,6 @@ function render(){
         return h("div",null,ta,h("button",{style:{marginTop:"6px",padding:"7px 16px",borderRadius:"8px",border:"none",background:"#10b981",color:"white",fontSize:"12px",fontWeight:"700",cursor:"pointer"},onClick:function(){var val=ta.value.trim();if(!val){rm.textContent="Paste data first.";rm.style.color="#dc2626";rm.style.display="block";return;}var res=importProgressJson(val);if(res.indexOf("ok:")===0){rm.textContent="✅ Imported: "+res.slice(3)+". Refreshing...";rm.style.color="#10b981";rm.style.display="block";ta.value="";setTimeout(function(){render();},700);}else{rm.textContent="❌ "+res;rm.style.color="#dc2626";rm.style.display="block";}}},"📥 Import"),rm);
       })()
     ));
-    // Manually add name
     app.appendChild(h("div",{style:{marginTop:"8px",display:"flex",gap:"8px"}},
       (function(){
         var ni=h("input",{type:"text",placeholder:"Or manually add a flexor name...",style:{flex:"1",padding:"8px 10px",borderRadius:"8px",border:"1px solid var(--border)",fontSize:"12px",outline:"none"}});
@@ -724,7 +696,6 @@ function render(){
     app.appendChild(h("button",{style:{marginTop:"8px",padding:"10px",borderRadius:"8px",border:"1px solid var(--border)",background:"white",color:"var(--slate)",fontSize:"12px",fontWeight:"600",width:"100%",cursor:"pointer"},onClick:function(){S.view="checklist";render();}},"← Back to Checklist"));
   }
 
-  // ====== CHECKLIST ======
   if(S.view==="checklist"){
     visPh.forEach(function(ph){
       var phaseTasks=isAdm?S.tasks.filter(function(t){return t.phaseId===ph.id;}):S.tasks.filter(function(t){return t.phaseId===ph.id&&t.visible!==false&&!t.adminOnly;});
@@ -739,7 +710,6 @@ function render(){
       var phEl=h("div",{className:"phase"});
       var phHead=h("div",{className:"phase-head"});
 
-      // COLOR BAR with inline color picker
       var cbar=h("div",{style:{width:"5px",minWidth:"5px",background:ph.color,cursor:isAdm?"pointer":"default",flexShrink:"0",position:"relative",borderRadius:"12px 0 0 12px"}});
       cbar.title=isAdm?"Click to change color":"";
       if(isAdm){
@@ -811,7 +781,6 @@ function render(){
           row.appendChild(cb);
           var content=h("div",{style:{flex:"1",minWidth:"0"}});
 
-          // Task text — inline for admin
           if(isAdm){
             var txta=h("textarea",{className:"ie ie-task"+(isDone?" done-txt":""),rows:1});
             txta.value=task.text||"";setTimeout(function(ta){return function(){ar(ta);};}(txta),0);
@@ -821,7 +790,6 @@ function render(){
             content.appendChild(h("span",{style:{fontSize:"12px",fontWeight:"500",lineHeight:"1.35",display:"block"}},task.text));
           }
 
-          // Meta row
           var meta=h("div",{style:{display:"flex",gap:"5px",marginTop:"3px",flexWrap:"wrap",alignItems:"center"}});
           if(isAdm){
             var dw=h("span",{style:{display:"inline-flex",alignItems:"center",gap:"2px",fontSize:"9px",color:"var(--teal)",background:"var(--teal-light)",border:"1px solid var(--teal-border)",borderRadius:"4px",padding:"1px 4px"}});
@@ -847,7 +815,6 @@ function render(){
           if(isAdm){var vlv=vl(task);meta.appendChild(h("span",{className:"vbadge "+vlv.cls,title:"Click to cycle: Visible → Hidden → Admin Only",onClick:function(e){e.stopPropagation();cycleVis(task);}},vlv.txt));}
           content.appendChild(meta);
 
-          // Resources
           var resRow=h("div",{style:{display:"flex",gap:"3px",flexWrap:"wrap",marginTop:"3px",alignItems:"center"}});
           if(task.resources)task.resources.forEach(function(r,ri){
             var hasUrl=r.url&&r.url.length>0;
@@ -864,14 +831,12 @@ function render(){
           if(isAdm)resRow.appendChild(h("button",{className:"lbtn",style:{padding:"3px 8px",fontSize:"9px"},onClick:function(e){e.stopPropagation();showAddRes(task);}},"+ resource"));
           if((task.resources&&task.resources.length>0)||isAdm)content.appendChild(resRow);
 
-          // Training links
           if(!task.trainingLinks)task.trainingLinks=[];
           var tlDiv=h("div",{style:{display:"flex",gap:"4px",flexWrap:"wrap",marginTop:"4px",alignItems:"center"}});
           task.trainingLinks.forEach(function(link,li){if(link.url&&link.url.length>0){var ltag=h("span",{className:"tl-tag"});var la=h("a",{href:link.url,target:"_blank",rel:"noopener",style:{color:"var(--teal)",textDecoration:"underline",fontWeight:"600"}},"🔗 "+(link.name||"Training Link"));(function(u){la.addEventListener("click",function(e){e.stopPropagation();e.preventDefault();window.open(u,"_blank");});})(link.url);ltag.appendChild(la);if(isAdm){ltag.appendChild(h("button",{style:{padding:"1px 4px",border:"none",background:"none",color:"#94a3b8",cursor:"pointer",fontSize:"9px"},onClick:function(e){e.stopPropagation();showTLEdit(task,li);}},"✏️"));ltag.appendChild(h("button",{style:{padding:"1px 4px",border:"none",background:"none",color:"var(--red)",cursor:"pointer",fontSize:"9px"},onClick:function(e){e.stopPropagation();task.trainingLinks.splice(li,1);save();render();}},"✕"));}tlDiv.appendChild(ltag);}});
           if(isAdm)tlDiv.appendChild(h("button",{className:"lbtn",style:{padding:"3px 8px",fontSize:"9px"},onClick:function(e){e.stopPropagation();showTLEdit(task,-1);}},"+ training link"));
           if(task.trainingLinks.length>0||isAdm)content.appendChild(tlDiv);
 
-          // NOTES (toggle, same pattern as GL/ML plan)
           (function(){
             if(!S.notes)S.notes={};
             var noteText=S.notes[task.id]||"";
@@ -889,7 +854,6 @@ function render(){
 
           row.appendChild(content);
 
-          // Admin reorder/delete
           if(isAdm){
             row.appendChild(h("div",{className:"abtn-row"},
               h("button",{className:"abtn",style:{background:"#f8fafc",color:"#94a3b8"},onClick:function(){var pts=S.tasks.filter(function(x){return x.phaseId===task.phaseId;});var i=pts.indexOf(task);if(i>0){var gi=S.tasks.indexOf(task);var pi=S.tasks.indexOf(pts[i-1]);var tmp=S.tasks[gi];S.tasks[gi]=S.tasks[pi];S.tasks[pi]=tmp;save();render();}}},"↑"),
@@ -900,13 +864,10 @@ function render(){
           taskEl.appendChild(row);body.appendChild(taskEl);
         });
 
-        // Add Task — available to everyone, admin gets full modal, users get quick-add inline
         if(isAdm){
           body.appendChild(h("button",{style:{marginTop:"6px",padding:"7px",borderRadius:"8px",border:"1px dashed var(--teal-border)",background:"var(--teal-light)",color:"var(--teal)",fontSize:"11px",fontWeight:"700",width:"100%",cursor:"pointer"},onClick:function(){showAddTask(ph.id);}},"+ Add Task"));
         } else {
-          // Quick-add inline for regular users
           var qaWrap=h("div",{style:{marginTop:"6px"}});
-          var qaOpen=false;
           var qaToggle=h("button",{style:{padding:"6px 12px",borderRadius:"8px",border:"1px dashed var(--teal-border)",background:"var(--teal-light)",color:"var(--teal)",fontSize:"11px",fontWeight:"700",width:"100%",cursor:"pointer"}},"\uFF0B Add a task to this phase");
           var qaForm=h("div",{style:{display:"none",marginTop:"6px",background:"#f8fafc",border:"1px solid var(--teal-border)",borderRadius:"10px",padding:"12px"}});
           var qaTxt=h("textarea",{placeholder:"Describe the task...",rows:2,style:{width:"100%",padding:"8px 10px",borderRadius:"8px",border:"1px solid var(--border)",fontSize:"12px",resize:"vertical",outline:"none",boxSizing:"border-box",fontFamily:"'DM Sans',sans-serif"}});
